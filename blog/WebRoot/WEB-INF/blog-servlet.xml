@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!--  - Application context definition for "springapp" DispatcherServlet.  -->
+<beans>
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">  
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>  
+        <property name="prefix" value="/WEB-INF/jsp/" />  
+    </bean> 
+	  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">  
+        <property name="mappings">  
+            <props>  
+                <prop key="/multy.do">multyAction</prop>  
+            </props>  
+        </property>  
+    </bean>  
+    
+    <bean id="multyAction" class="com.blog.controller.TestController">  
+        <property name="methodNameResolver">  
+            <bean class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">  
+            <!-- 指定参数名为action -->  
+                <property name="paramName" value="action" />  
+            </bean>  
+        </property>  
+    </bean>  
+</beans>
