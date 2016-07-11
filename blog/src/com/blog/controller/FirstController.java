@@ -8,18 +8,16 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import com.blog.entity.UserInfo;
 
-public class TestController extends MultiActionController{
+public class FirstController extends MultiActionController{
 	public ModelAndView add(HttpServletRequest request,  
             HttpServletResponse response, UserInfo user) {  
         ModelAndView mav = new ModelAndView();  
-        mav.addObject("option", new String[] {"abc","cde"});  
         mav.setViewName("b.jsp");  
         return mav;  
     }  
 	public ModelAndView del(HttpServletRequest request,  
             HttpServletResponse response, UserInfo user) {  
         ModelAndView mav = new ModelAndView();  
-        mav.addObject("option", new String[] {"abc","cde"});  
         mav.setViewName("c.jsp");  
         return mav;  
     }  
