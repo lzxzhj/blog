@@ -6,22 +6,6 @@
 	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
 	    <load-on-startup>1</load-on-startup>  
 	</servlet>  
-	
-	
-	<!-- 静态资源相关配置 -->
-	<servlet-mapping>
-	    <servlet-name>default</servlet-name>
-	    <url-pattern>*.jpg</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-	    <servlet-name>default</servlet-name>
-	    <url-pattern>*.js</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-	    <servlet-name>default</servlet-name>
-	    <url-pattern>*.css</url-pattern>
-	</servlet-mapping>  
-	
 	<servlet-mapping>  
 	    <servlet-name>blog</servlet-name>  
 	    <url-pattern>/</url-pattern>  
