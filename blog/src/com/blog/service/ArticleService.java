@@ -9,7 +9,7 @@ import org.apache.commons.dbutils.QueryRunner;
 
 public class ArticleService {
 	public boolean saveHtmlToDB(String html){
-		  Connection conn = null;  
+		    Connection conn = null;  
 	        String url = "jdbc:mysql://localhost:3306/blog?characterEncoding=utf-8";  
 	        String jdbcDriver = "com.mysql.jdbc.Driver";  
 	        String user = "root";  
